@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR  -->
+<!-- Simple navbar showing the website name -->
+<nav>
+    <h2>DocBook</h2>
+</nav>
+
+<!--  PROFILE PAGE SECTION  -->
+<!-- Main layout for displaying doctor profile information -->
+<section class="profile-page">
+
+    <!--  LEFT SIDE: IMAGE GALLERY  -->
+    <!-- Displays doctor images dynamically in a gallery -->
+    <div class="profile-left">
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <!--  RIGHT SIDE: DOCTOR INFO  -->
+    <!-- Contains detailed information about the doctor -->
+    <div class="profile-right">
+
+        <!-- Doctor name -->
+        <h1 id="docName"></h1>
+
+        <!-- Doctor specialty -->
+        <p class="specialty" id="docSpec"></p>
+
+        <!-- Biography section -->
+        <div class="info-box">
+            <h3>Biography</h3>
+            <p id="docBio"></p>
+        </div>
+
+        <!-- Location section -->
+        <div class="info-box">
+            <h3>Location</h3>
+            <p id="docLocation"></p>
+        </div>
+
+        <!-- Contact information -->
+        <div class="info-box">
+            <h3>Contact</h3>
+            <p>Email: <span id="docEmail"></span></p>
+            <p>Phone: <span id="docPhone"></span></p>
+        </div>
+
+        <!-- Button to open booking section -->
+        <button onclick="book()">Book Appointment</button>
+
+    </div>
+
+    <!--  BOOKING SECTION  -->
+    <!-- Hidden booking form that appears when user clicks booking button -->
+    <div class="booking-section" id="bookingSection" style="display:none; margin-top:20px;">
+
+        <h3>Book Appointment</h3>
+
+        <!-- Patient details input -->
+        <input type="text" id="patientName" placeholder="Your Name" required>
+        <input type="tel" id="patientPhone" placeholder="Phone Number" required>
+        <input type="email" id="patientemail" placeholder="Email" required>
+
+        <!-- Appointment date selection -->
+        <label>Select Date:</label>
+        <input type="date" id="appointmentDate">
+
+        <!-- Time slot selection -->
+        <h4>Select Time:</h4>
+        <div class="time-slots">
+            <div class="slot">10:00 AM</div>
+            <div class="slot">11:00 AM</div>
+            <div class="slot">12:00 PM</div>
+            <div class="slot">2:00 PM</div>
+            <div class="slot">3:00 PM</div>
+        </div>
+
+        <!-- Confirm booking button -->
+        <button onclick="confirmBooking()">Confirm Booking</button>
+
+        <!-- Success message after booking -->
+        <p id="successMessage" style="color:green; margin-top:10px; display:none;">
+            Appointment booked successfully!
+        </p>
+
+    </div>
+
+</section>
+
+<!-- External JavaScript file for profile functionality -->
+<script src="profile.js"></script>
+
+</body>
+</html>
