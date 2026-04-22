@@ -175,7 +175,7 @@ function confirmBooking() {
     const docName = document.getElementById("docName").textContent;
 
     // Store booking information in cookie
-    document.cookie = `booking=Appointment with ${docName} on ${date} at ${selectedSlot}, More information will be sent to you via SMS.; path=/`;
+    document.cookie = `booking=Appointment with ${docName} on ${date} at ${selectedSlot}, More information will be sent via your email and SMS.; path=/`;
 
     // Reload page to display confirmation message
     location.reload();
