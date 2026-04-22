@@ -1,0 +1,159 @@
+/* ============================================
+   PORTAL STYLES
+   Login and Signup page styles
+   ============================================ */
+
+/* Portal main container */
+.portal-main {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #87ceeb 0%, #e0f6ff 100%);
+}
+
+/* Portal container */
+.portal-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Portal card */
+.portal-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(135, 206, 235, 0.3);
+}
+
+.portal-card h2 {
+    font-size: 2rem;
+    color: #004e89;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Portal subtitle */
+.portal-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #004e89;
+    font-weight: 600;
+}
+
+/* Form Input */
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #87ceeb;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #004e89;
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.3);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 0.3rem;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+/* Form Checkbox */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    accent-color: #004e89;
+}
+
+.form-check label {
+    margin: 0;
+    color: #555;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.form-check a {
+    color: #004e89;
+    text-decoration: underline;
+}
+
+/* Button - Full Width */
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Portal Links Secondary */
+.portal-links-secondary {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0f6ff;
+}
+
+.portal-links-secondary a {
+    color: #004e89;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.portal-links-secondary a:hover {
+    color: #87ceeb;
+    text-decoration: underline;
+}
+
+/* Portal Footer */
+.portal-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.portal-footer a {
+    color: #004e89;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.portal-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .portal-card {
+        padding: 1.5rem;
+    }
+    
+    .portal-card h2 {
+        font-size: 1.5rem;
+    }
+}
