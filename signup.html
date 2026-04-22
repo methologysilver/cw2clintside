@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="authpage.css">
+</head>
+<body>
+        <!-- SIGNUP SECTION -->
+    <main class="portal-main">
+        <div class="portal-container">
+            <!-- Signup Form -->
+            <div class="portal-card">
+                <h2>Create Account</h2>
+                <p class="portal-subtitle">Join FitLife and start tracking your wellness</p>
+
+                <form id="signupForm" onsubmit="handleSignup(event)">
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            placeholder="Rajat Khanal" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="signupEmail" 
+                            placeholder="your@email.com" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input 
+                            type="password" 
+                            id="signupPassword" 
+                            placeholder="Min 8 characters" 
+                            required
+                            class="form-input"
+                        >
+                        <small>Must be at least 8 characters</small>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input 
+                            type="password" 
+                            id="confirmPassword" 
+                            placeholder="Confirm password" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+                    <script >
+                        // Add real-time password match validation
+                        const signupPassword = document.getElementById('signupPassword');
+                        const confirmPassword = document.getElementById('confirmPassword');
+
+                        function validatePasswordMatch() {
+                            if (confirmPassword.value && signupPassword.value !== confirmPassword.value) {
+                                confirmPassword.setCustomValidity("Passwords do not match");
+                            } else {
+                                confirmPassword.setCustomValidity("");
+                            }
+                        }
+
+                        signupPassword.addEventListener('input', validatePasswordMatch);
+                        confirmPassword.addEventListener('input', validatePasswordMatch);
+                    </script>
+
+                    <!-- Terms Agreement -->
+                    <div class="form-check">
+                        <input type="checkbox" id="agreeTerms" required class="form-checkbox">
+                        <label for="agreeTerms">I agree to Terms of Service and Privacy Policy</label>
+                    </div>
+
+                    <!-- Signup Button -->
+                    <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                </form>
+
+                <!-- Login Link -->
+                <div class="portal-footer">
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="authentication.js"></script>
+
+</body>
+</html>
