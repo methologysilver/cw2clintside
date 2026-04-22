@@ -64,7 +64,7 @@ function handleLogin(event) {
         alert(`Welcome back, ${userData.name}!`);
 
         // Redirect to your dashboard or home page
-        window.location.href = 'dashbord.html'; 
+        window.location.href = 'Home_page.html'; 
     } else {
 
         alert("Incorrect password. Please try again.");
