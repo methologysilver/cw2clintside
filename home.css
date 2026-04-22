@@ -1,0 +1,460 @@
+/*  GLOBAL RESET  */
+/* Removes default margin/padding and sets base font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*  BODY STYLING  */
+/* Sets background color and default text color */
+body {
+    background-color: #f5f9ff;
+    color: #333;
+}
+
+/*  NAVBAR  */
+/* Top navigation bar styling */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+nav h2 {
+    color: #2a7de1;
+    font-size: 24px;
+    margin-right: 40px;
+}
+
+/* Navigation links container */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Navigation link style */
+.nav-links li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Underline hover animation */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #2a7de1;
+    transition: 0.3s;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+    color: #2a7de1;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/*  HERO SECTION  */
+/* Main banner section */
+.hero {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background image animation layer */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: bannerSlide 15s infinite;
+    z-index: -1;
+}
+
+/* Dark overlay for better text visibility */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+/* Hero text container */
+.hero-text {
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hero title */
+.hero-text h1 {
+    font-size: 50px;
+}
+
+/* Hero paragraph */
+.hero-text p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Hero button */
+.hero-text button {
+    padding: 15px 30px;
+    background: #2a7de1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*  HERO BACKGROUND SLIDESHOW  */
+@keyframes bannerSlide {
+    0% { background-image: url("banner-photos/2-dawin.jpg"); }
+    25% { background-image: url("banner-photos/atiba2-flbloc.jpg"); }
+    50% { background-image: url("banner-photos/bayass.jpg"); }
+    75% { background-image: url("banner-photos/noti.jpg"); }
+    100% { background-image: url("banner-photos/tbiba.jpg"); }
+}
+
+/*  SEARCH BOX  */
+/* Doctor search input section */
+.search-box {
+    margin: 40px auto;
+    width: 80%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+/* Input fields inside search box */
+.search-box input,
+.search-box select {
+    padding: 10px;
+    width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Search button */
+.search-box button {
+    padding: 10px 20px;
+    background: #2a7de1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/*  HOW IT WORKS SECTION  */
+.steps {
+    text-align: center;
+    padding: 60px;
+}
+
+/* Steps layout container */
+.step-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+/* Individual step box */
+.step {
+    width: 30%;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+/*  FOOTER  */
+footer {
+    background: #2a7de1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  DOCTORS SECTION  */
+.doctors {
+    padding: 60px;
+    text-align: center;
+}
+
+.doctors h2 {
+    margin-bottom: 20px;
+}
+
+/* Filter buttons container */
+.filter-box {
+    margin-bottom: 30px;
+}
+
+/* Filter buttons */
+.filter-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    background: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Active/hover filter buttons */
+.filter-btn:hover,
+.filter-btn.active {
+    background: #2a7de1;
+    color: white;
+}
+
+/* Doctors grid layout */
+.doctor-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Doctor card */
+.doctor-card {
+    width: 250px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Doctor image */
+.doctor-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Hover effect for cards */
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/*  PROFILE PAGE  */
+.profile-page {
+    display: flex;
+    padding: 50px;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Left side gallery */
+.profile-left {
+    flex: 1;
+}
+
+/* Image gallery layout */
+.gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Gallery images */
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Image hover effect */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Right side info */
+.profile-right {
+    flex: 1;
+}
+
+.specialty {
+    color: #2a7de1;
+    margin-bottom: 20px;
+}
+
+/* Info boxes */
+.info-box {
+    margin-bottom: 20px;
+}
+
+/* Profile button */
+.profile-right button {
+    padding: 12px 25px;
+    background: #2a7de1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*  MOBILE RESPONSIVE  */
+@media (max-width: 768px) {
+    .profile-page {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*  BOOKING SECTION  */
+.booking {
+    padding: 60px;
+    text-align: center;
+    background: #fff;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Time slots container */
+.time-slots {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Individual time slot */
+.slot {
+    padding: 10px 15px;
+    background: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Slot hover and active state */
+.slot:hover,
+.slot.active {
+    background: #2a7de1;
+    color: white;
+}
+
+/* Booking form inputs */
+.booking-section input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/*  CONTACT SECTION  */
+.contact {
+    padding: 60px;
+    text-align: center;
+    background: #fff;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Contact form container */
+.contact form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Contact inputs and textarea */
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Contact button */
+.contact button {
+    padding: 12px 25px;
+    background: #2a7de1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-image img {
+    width: 300px;
+    max-width: 100%;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
