@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="authpage.css">
+</head>
+<body>
+        <main class="portal-main">
+        <div class="portal-container">
+            <!-- Login Form -->
+            <div class="portal-card">
+                <h2>Welcome Back</h2>
+                <p class="portal-subtitle">Sign in to your FitLife account</p>
+
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <!-- Email Input -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            placeholder="your@email.com" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+
+                    <!-- Password Input -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="Enter your password" 
+                            required
+                            class="form-input"
+                        >
+                    </div>
+
+                    <!-- Remember Me -->
+                    <div class="form-check">
+                        <input type="checkbox" id="rememberMe" class="form-checkbox">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button type="submit" class="btn btn-primary btn-full">Login</button>
+                </form>
+
+                <!-- Forgot Password Link -->
+                <div class="portal-links-secondary">
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                </div>
+
+                <!-- Sign Up Link -->
+                <div class="portal-footer">
+                    <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="authentication.js"></script>
+
+</body>
+</html>
