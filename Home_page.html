@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocBook - Online Doctor Appointment</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION BAR -->
+
+<nav>
+   <nav>
+    <h2>DocBook</h2>
+
+    <div class="nav-right">
+        <ul class="nav-links">
+            <!-- Links to page sections -->
+            <li><a href="#search">Search</a></li>
+            <li><a href="#steps">How It Works</a></li>       
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html"> login</li>
+        </ul>
+    </div>
+    </nav>
+</nav>
+
+<!-- HERO SECTION -->
+<!-- Main introduction area with heading and call-to-action button -->
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>Book Trusted Doctors Online</h1>
+        <p>Quick, secure, and hassle-free appointments anytime, anywhere.</p>
+        <button id="bookBtn">Book Now</button>
+    </div>
+
+</section>
+
+<!-- SEARCH SECTION  -->
+<!-- Let the users to search doctors by specialty, location, and date -->
+<section class="search-box" id="search">
+
+    <input type="text" placeholder="Specialty (e.g. Dentist)">
+    <input type="text" placeholder="Location">
+    <input type="date">
+
+    <button id="searchBtn">Search</button>
+
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<!-- Explains the booking process-->
+<section class="steps" id="steps">
+
+    <h2>How It Works</h2>
+
+    <div class="step-container">
+
+        <div class="step">
+            <!-- Step 1 -->
+            <h3>1. Search</h3>
+            <p>Find the right doctor easily.</p>
+        </div>
+
+        <div class="step">
+            <!-- Step 2 -->
+            <h3>2. Book</h3>
+            <p>Select a time slot that suits you.</p>
+        </div>
+
+        <div class="step">
+            <!-- Step 3 -->
+            <h3>3. Consult</h3>
+            <p>Meet your doctor online or in person.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DOCTORS SECTION -->
+<!-- Displays list of doctors with filter options -->
+<section class="doctors" id="doctors">
+
+    <h2>Our Doctors</h2>
+
+    <!-- Filter buttons for doctor specialties -->
+    <div class="filter-box">
+        <button class="filter-btn active" data-specialty="all">All</button>
+        <button class="filter-btn" data-specialty="Cardiologist">Cardiologist</button>
+        <button class="filter-btn" data-specialty="Dermatologist">Dermatologist</button>
+        <button class="filter-btn" data-specialty="Neurologist">Neurologist</button>
+        <button class="filter-btn" data-specialty="Orthopedic">Orthopedic</button>
+    </div>
+
+    <!-- Doctor profile cards -->
+    <div class="doctor-container">
+
+        <!-- Doctor 1 -->
+        <a href="doctor-profile.html?doctor=fadi" class="doctor-card" data-specialty="Cardiologist" data-location="Leeds">
+            <img src="Fadi-Mansour/Fadi-Mansour-profile-pic.jpg" alt="Doctor">
+            <h3>Dr. Fadi Mansour</h3>
+            <p>Cardiologist</p>
+        </a>
+
+        <!-- Doctor 2 -->
+        <a href="doctor-profile.html?doctor=amelie" class="doctor-card" data-specialty="Dermatologist" data-location="London">
+            <img src="Amélie-Dubois/Amélie-Dubois-profile-pic.jpg" alt="Doctor">
+            <h3>Dr. Amélie Dubois</h3>
+            <p>Dermatologist</p>
+        </a>
+
+        <!-- Doctor 3 -->
+        <a href="doctor-profile.html?doctor=olivia" class="doctor-card" data-specialty="Neurologist" data-location="Manchester">
+            <img src="Olivia-Kim/Olivia-Kim-profile-pic.jpg" alt="Doctor">
+            <h3>Dr. Olivia Kim</h3>
+            <p>Neurologist</p>
+        </a>
+
+        <!-- Doctor 4 -->
+        <a href="doctor-profile.html?doctor=diego" class="doctor-card" data-specialty="Orthopedic" data-location="London">
+            <img src="Diego-Martínez/Diego-Martinez-profile-pic.jpg" alt="Doctor">
+            <h3>Dr. Diego Martínez</h3>
+            <p>Orthopedic</p>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<!-- Contact form for users to send messages -->
+<section class="contact" id="contact">
+
+    <h2>Contact Us</h2>
+    
+    <p>Have questions or need help? Send us a message.</p>
+    <div class="contact-container">
+
+    <!-- Left: Image -->
+    <div class="contact-image">
+        <img src="contact-us-illus/19198607.jpg" alt="Contact illustration">
+    </div>
+      
+    
+    <!-- Right: Form -->
+    <div class="contact-form">
+    <form id="contactForm">
+
+        <!-- User name input -->
+        <input type="text" id="contactName" placeholder="Your Name" required>
+
+        <!-- User email input -->
+        <input type="email" id="contactEmail" placeholder="Your Email" required>
+
+        <!-- User message input -->
+        <textarea id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+
+        <!-- Submit button -->
+        <button type="submit">Send Message</button>
+
+        <!-- Success message (hidden by default) -->
+        <p id="contactSuccess" style="display:none; color:green; margin-top:10px;">
+            Message sent successfully!
+        </p>
+
+    </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<!-- Copyright information -->
+<footer>
+    <p>© 2026 DocBook | All Rights Reserved</p>
+</footer>
+
+<!-- Linked to a Javascript file -->
+<script src="script.js"></script>
+</body>
+</html>
